@@ -2,7 +2,7 @@
   "name": "vscode-to-toml",
   "displayName": "vscode-to-toml",
   "description": "Converts inferior formats to toml",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jonathanmh/vscode-to-toml"
