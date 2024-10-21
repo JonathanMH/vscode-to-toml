@@ -7,12 +7,14 @@
     "type": "git",
     "url": "git+https://github.com/jonathanmh/vscode-to-toml"
   },
+  "publisher": "jonathanmh",
   "engines": {
     "vscode": "^1.93.0"
   },
   "categories": [
     "Other"
   ],
+  "icon": "logo/logo.png",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
