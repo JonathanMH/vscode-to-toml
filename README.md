@@ -5,6 +5,11 @@ This extension converts files to toml (if possible).
 Currently supported source file formats:
 
 * JSON
+* YAML
+
+## Download:
+
+* https://marketplace.visualstudio.com/items?itemName=jonathanmh.vscode-to-toml
 
 ## Usage
 
