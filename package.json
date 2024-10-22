@@ -1,8 +1,8 @@
 {
   "name": "vscode-to-toml",
-  "displayName": "vscode-to-toml",
+  "displayName": "Convert to TOML",
   "description": "Converts inferior formats to toml",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jonathanmh/vscode-to-toml"
@@ -20,8 +20,12 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-to-toml.current-file.convert",
-        "title": "to TOML: convert current file"
+        "command": "vscode-to-toml.current-file.convert-json",
+        "title": "to TOML: convert current file (JSON)"
+      },
+      {
+        "command": "vscode-to-toml.current-file.convert-yaml",
+        "title": "to TOML: convert current file (YAML)"
       }
     ]
   },
@@ -30,7 +34,7 @@
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
+    "lint": "eslint",
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
@@ -40,12 +44,15 @@
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
     "@vscode/test-electron": "^2.3.4",
-    "eslint": "^8.50.0",
+    "eslint": "^8.57.1",
     "glob": "^10.3.3",
+    "globals": "^15.11.0",
     "mocha": "^10.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "typescript-eslint": "^8.11.0"
   },
   "dependencies": {
-    "json2toml": "^6.1.1"
+    "json2toml": "^6.1.1",
+    "yaml": "^2.6.0"
   }
 }

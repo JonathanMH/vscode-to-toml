@@ -1,9 +1,9 @@
 import * as vscode from 'vscode';
 
-import { convertFromJsonString } from './lib/convert';
+import { convertFromString } from './lib/convert';
+import { DocumentType } from './types'
 
-export async function onConvertFile() {
-	console.log('async onConvertFile')
+export async function onConvertFile(fileType: DocumentType) {
 	try {
 		const editor = vscode.window.activeTextEditor;
 
@@ -13,11 +13,9 @@ export async function onConvertFile() {
 
 		const { document } = editor;
 		const text = document.getText();
-		console.log('document text', text)
-		const newText = convertFromJsonString(text);
-		console.log('newText', newText)
+		const newText = convertFromString(text, fileType);
 
-		await replaceDocument(document, newText);
+		await replaceDocument(document, newText || '');
 	} catch (error) {
 		// @TODO: handle
 		console.log(error)
@@ -36,6 +34,5 @@ async function replaceDocument(document: vscode.TextDocument, replacement: strin
 	} catch (error) {
 		console.log(error)
 		// @TODO: handle
-		// showError(error);
 	}
 }

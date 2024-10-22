@@ -12,4 +12,4 @@ Hit `CTRL + SHIFT + P` and type: `to toml` when editing JSON file to replace it 
 
 ## Credits
 
-Even though misguided in the adoption of [yaml](https://noyaml.com/), my colleague @hilleer has created a plugin for converting between yaml and json, which made the development of this extension way easier: [hilleer/vscode-yaml-plus-json](https://github.com/hilleer/vscode-yaml-plus-json)
+Even though misguided in the adoption of [yaml](https://noyaml.com/), my colleague [@hilleer](https://github.com/hilleer/) has created a plugin for converting between yaml and json, which made the development of this extension way easier: [hilleer/vscode-yaml-plus-json](https://github.com/hilleer/vscode-yaml-plus-json)
