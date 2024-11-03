@@ -7,6 +7,29 @@ Currently supported source file formats:
 * JSON
 * YAML
 
+## Example
+
+If you currently have a file open that contains for example yaml, you can hit `CTRL+SHIFT+P` and start typing `to TOML` (casing does not matter).
+
+It will turn a file like this:
+
+```yaml
+jobs:
+  job1:
+    steps:
+      - checkout
+      - run: "execute-script-for-job1"
+```
+
+into
+
+```toml
+[jobs.job1]
+steps = ["checkout",{"run":"execute-script-for-job1"}]
+```
+
+Please make sure to do this with version controlled files as part of planned refactors as it will replace the content of your current file.
+
 ## Download:
 
 * https://marketplace.visualstudio.com/items?itemName=jonathanmh.vscode-to-toml
